@@ -1,10 +1,9 @@
 import { createPortal } from 'react-dom';
-import { useEffect } from 'react';
+import { useEffect  } from 'react';
 import css from './Modal.module.css';
 import PropTypes from 'prop-types';
 
 const modalRoot = document.querySelector('#modal-root');
-
 export const Modal = ({ onClose, children }) => {
   useEffect(() => {
     const hendelKeyDown = e => {
@@ -26,6 +25,9 @@ export const Modal = ({ onClose, children }) => {
     modalRoot
   );
 };
+
+
+
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
